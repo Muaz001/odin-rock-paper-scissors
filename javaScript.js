@@ -71,5 +71,27 @@ function playRound (computer_choice, human_choice) {
 }
 
 
-computer_choice = getComputerChoice()
-human_choice = getHumanChoice();
+function playGame () {
+    for (i = 0; i < 5; i++) {
+
+        let computer_choice = getComputerChoice();
+        let human_choice = getHumanChoice();
+
+        playRound(computer_choice, human_choice); 
+    }
+
+    console.log(`Your Score: ${humanScore}`);
+    console.log(`Computer's Score: ${computerScore}`);
+
+    if (computerScore > humanScore) {
+        console.log("You lost! The computer won the game of 5 rounds.");
+    }
+    else if (humanScore > computerScore) {
+        console.log("You won the game of 5 rounds!");
+    }
+    else {
+        console.log("The game of 5 rounds is a tie!");
+    }
+}
+
+playGame();
