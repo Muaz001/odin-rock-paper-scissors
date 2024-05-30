@@ -69,7 +69,6 @@ function playRound (computer_choice, human_choice) {
 }
 
 
-
 const buttons = document.querySelector(".buttons");
 buttons.addEventListener("click", (button) => {
     let human_choice = button.target.className;
